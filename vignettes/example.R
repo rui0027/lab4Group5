@@ -2,8 +2,8 @@
 
 ## IF NOT DOWNLOAD YET:
 # library(devtools)
-# devtools::install_github("Crispy-tuna/lab4Group5/lab4Group5")
-## package name is lab4Group5，which is on the Crispy-tuna/lab4Group5/lab4Group5
+# devtools::install_github("rui0027/lab4Group5")
+## package name is lab4Group5，which is on the rui0027/lab4Group5
 
 ### load package
 library(lab4Group5)
