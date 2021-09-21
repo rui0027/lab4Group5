@@ -1,0 +1,71 @@
+---
+title: "linreg:QR decomposition with RC class,Group5,20/9/2021"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{linreg:QR decomposition with RC class,Group5,20/9/2021}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+data("iris")
+library(ggplot2)
+```
+
+```{r setup}
+library(lab4Group5)
+```
+This vignette summaries the various functions in package lab4Group5.
+
+##linreg()
+
+This function should return a object that contains a list that contains variables in the formula,independent variables matrix,dependent variable,regressions coefficients,the fitted values,the residuals,the degrees of freedom,the residual variance,the variance of the regression coefficients,t-values,p-values.
+```{r}
+linreg_mod <- linreg(Petal.Length~Species, data=iris)
+```
+
+##print()
+
+This function should print out the coefficients and coefficient names.
+```{r}
+linreg_mod$print()
+```
+
+##plot()
+
+This function should plot two plots using ggplot2.One plot is Residuals vs Fitted value,the other is Standardized residuals vs Fitted values.
+```{r}
+linreg_mod$plot()
+```
+
+##resid()
+
+This function should return the vector of residuals e.
+```{r}
+linreg_mod$resid()
+```
+
+##pred()
+
+This function should return the predicted values y^.
+```{r}
+linreg_mod$pred()
+```
+
+##coef
+
+This function should return the coefficients as a named vector.
+```{r}
+linreg_mod$coef()
+```
+
+##summary
+
+This function should return a list that contains coefficients with their standard error, t-value and p-value as well as the estimate of^and the degrees of freedom in the model.
+```{r}
+linreg_mod$summary()
+```
